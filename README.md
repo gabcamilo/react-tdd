@@ -4,4 +4,13 @@ This repository is based on the course [ReactJS, Hooks, Recoil, TDD, Clean Archi
 
 ## Configuring Project Dependencies
 
+### npm
+
 `npm init -y`
+
+
+### Message linter
+
+Won`t allow nonstandard commits from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+`npm i -D git-commit-msg-linter`
