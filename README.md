@@ -82,3 +82,35 @@ Won`t allow nonstandard commits from [Conventional Commits](https://www.conventi
 node_modules
 .vscode
 ```
+
+### Validation before commits
+
+`$ npm i -D lint-staged husky`
+
+Before committing, the staged files are tested for lint errors and it tries to fix the those errors. If it can't be fixed automatically the commit is stopped.
+
+#### huskyrc.json:
+
+`$ touch huskyrc.json`
+
+Defines hooks for git.
+
+ ```json
+{
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+}
+```
+
+#### lintstagedrc.json:
+
+`$ touch lintstagedrc.json`
+
+ ```json
+ {
+  "*.{ts,tsx}": [
+    "eslint 'src/**' --fix"
+  ]
+}
+```
