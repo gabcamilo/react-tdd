@@ -114,3 +114,25 @@ Defines hooks for git.
   ]
 }
 ```
+
+### Jest
+
+`$ npm i -D jest @types/jest ts-jest`
+
+#### jest.config.js:
+
+`$ touch jest.config.js`
+
+```javascript
+module.exports = {
+  roots: ['<rootDir>/src'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{ts,tsx}'
+  ],
+  coverageDirectory: 'coverage',
+  testEnvironment: 'node',
+  transform: {
+    '.+\\.ts$': 'ts-jest'
+  }
+}
+```
